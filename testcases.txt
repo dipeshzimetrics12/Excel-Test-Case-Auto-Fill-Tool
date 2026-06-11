@@ -7,130 +7,28 @@
 | FT-03 | Verify STL preview is displayed when STL file is available from previous workflow       | Open Configuration with STL available.                                                                            | STL preview is displayed successfully.                         | High     |
 | FT-04 | Verify STL preview section is hidden when STL file is unavailable                       | Open Configuration without STL.                                                                                   | STL preview section is hidden or displays appropriate message. | Medium   |
 | FT-05 | Verify center configuration panel is displayed when Configuration screen loads          | Open Configuration screen.                                                                                        | Configuration panel appears in center section.                 | Critical |
-| FT-06 | Verify tooth selection panel is displayed on right side when Configuration screen loads | Open Configuration screen.                                                                                        | Tooth selection panel is displayed on right side.              | Critical |
-| FT-07 | Verify default tooth numbering system is Palmer when Configuration screen opens         | Open Configuration screen.                                                                                        | Palmer numbering system is selected by default.                | High     |
-| FT-08 | Verify Anchorage step is unlocked when Configuration starts                             | Open Configuration screen.                                                                                        | Anchorage step is available for selection.                     | Critical |
-| FT-09 | Verify Anchorage Modifications step unlocks when Anchorage step is completed            | Complete Anchorage selection.                                                                                     | Anchorage Modifications step becomes enabled.                  | Critical |
-| FT-10 | Verify Tubes step unlocks when Anchorage Modifications step is completed                | Complete Anchorage Modifications.                                                                                 | Tubes step becomes enabled.                                    | Critical |
-| FT-11 | Verify Accessories step unlocks when Tubes step is completed                            | Complete Tubes selection.                                                                                         | Accessories step becomes enabled.                              | Critical |
-| FT-12 | Verify Extra Charges step unlocks when Accessories step is completed                    | Complete Accessories selection.                                                                                   | Extra Charges step becomes enabled.                            | Critical |
-| FT-13 | Verify Bands anchorage option can be selected when Anchorage step is active             | Select Bands.                                                                                                     | Bands option is selected successfully.                         | Critical |
-| FT-14 | Verify Ultimax Bands anchorage option can be selected when Anchorage step is active     | Select Ultimax Bands.                                                                                             | Selection is saved successfully.                               | High     |
-| FT-15 | Verify Rollo Bands anchorage option can be selected when Anchorage step is active       | Select Rollo Bands.                                                                                               | Selection is saved successfully.                               | High     |
-| FT-16 | Verify Crowns anchorage option can be selected when Anchorage step is active            | Select Crowns.                                                                                                    | Selection is saved successfully.                               | High     |
-| FT-17 | Verify 2/3 Crowns anchorage option can be selected when Anchorage step is active        | Select 2/3 Crowns.                                                                                                | Selection is saved successfully.                               | High     |
-| FT-18 | Verify 3D anchorage option can be selected when Anchorage step is active                | Select 3D.                                                                                                        | Selection is saved successfully.                               | High     |
-| FT-19 | Verify Anchorage Modification options can be selected when step is active               | Select modification values.                                                                                       | Selected modifications are retained.                           | High     |
-| FT-20 | Verify Tube options can be selected when Tubes step is active                           | Select any tube type.                                                                                             | Selected tube is saved successfully.                           | High     |
-| FT-21 | Verify Accessories can be selected when Accessories step is active                      | Select accessory.                                                                                                 | Accessory is added successfully.                               | High     |
-| FT-22 | Verify Extra Charges can be selected when Extra Charges step is active                  | Select extra charge item.                                                                                         | Selection is saved successfully.                               | High     |
-| FT-23 | Verify progress indicator updates when a configuration step is completed                | Complete a step.                                                                                                  | Progress percentage increases.                                 | Critical |
-| FT-24 | Verify progress reaches 100% when all configuration steps are completed                 | Complete all steps.                                                                                               | Progress indicator shows 100%.                                 | Critical |
-| FT-25 | Verify tooth numbering switches to Universal when toggle is enabled                     | Toggle numbering system.                                                                                          | Universal numbering is displayed.                              | High     |
-| FT-26 | Verify tooth numbering switches back to Palmer when toggle is disabled                  | Toggle back to Palmer.                                                                                            | Palmer numbering is displayed.                                 | High     |
-| FT-27 | Verify selected teeth remain selected when numbering system changes                     | Select teeth then switch numbering.                                                                               | Same teeth remain selected.                                    | Critical |
-| FT-28 | Verify configuration can be saved as draft when partially completed                     | Complete partial configuration and save draft.                                                                    | Draft saved successfully.                                      | Critical |
-| FT-29 | Verify saved draft can be reopened later                                                | Open saved draft order.                                                                                           | Draft loads successfully.                                      | Critical |
-| FT-30 | Verify all configuration values are restored when draft is resumed                      | Resume saved draft.                                                                                               | All saved selections are restored.                             | Critical |
-| FT-31 | Verify current progress percentage is restored when draft is resumed                    | Resume draft.                                                                                                     | Progress matches saved state.                                  | Critical |
-| FT-32 | Verify tooth numbering preference is restored when draft is resumed                     | Save draft in Universal mode and resume.                                                                          | Universal mode remains selected.                               | High     |
-| FT-33 | Verify 3D preview updates when anchorage selection changes                              | Select anchorage.                                                                                                 | 3D model updates accordingly.                                  | Critical |
-| FT-34 | Verify 3D preview updates when accessories are added                                    | Add accessory.                                                                                                    | Layer is added to 3D model.                                    | Critical |
-| FT-35 | Verify cumulative configuration is reflected in final 3D model                          | Complete multiple selections.                                                                                     | Final model contains all selected layers.                      | Critical |
 
 
 2. Validation Test Cases
 
-| TC-ID  | Test Scenario                                                                                                  | Test Steps                  | Expected Result                         | Priority |
-| ------ | -------------------------------------------------------------------------------------------------------------- | --------------------------- | --------------------------------------- | -------- |
-| VAL-01 | Verify only Bluegrass Tongue Trainer appliance opens this configuration flow when HAB401 appliance is selected | Select HAB401 appliance.    | Configuration flow loads successfully.  | Critical |
-| VAL-02 | Verify unsupported appliance types cannot access Bluegrass configuration flow                                  | Select different appliance. | Bluegrass configuration is unavailable. | Critical |
-| VAL-03 | Verify progress percentage calculation when one step is completed                                              | Complete first step.        | Correct percentage displayed.           | High     |
-| VAL-04 | Verify progress percentage calculation when multiple steps are completed                                       | Complete multiple steps.    | Percentage calculation is accurate.     | High     |
-| VAL-05 | Verify MAC100 code is mapped correctly when Bands anchorage is selected                                        | Select Bands.               | MAC100 mapping stored.                  | High     |
-| VAL-06 | Verify MAC102 code is mapped correctly when Ultimax Bands is selected                                          | Select Ultimax Bands.       | MAC102 mapping stored.                  | High     |
-| VAL-07 | Verify MAC205 X2 code is mapped correctly for .022 Double Tube                                                 | Select .022 Double Tube.    | Correct code mapping stored.            | High     |
-| VAL-08 | Verify multiple supported selections are retained during session                                               | Select multiple values.     | All selections persist.                 | Critical |
-| VAL-09 | Verify draft stores all selected configuration values when Save Draft is clicked                               | Save draft.                 | All values saved correctly.             | Critical |
-| VAL-10 | Verify draft stores current workflow step when Save Draft is clicked                                           | Save draft midway.          | Current step saved correctly.           | Critical |
-| VAL-11 | Verify final appliance model contains all selected layers after completion                                     | Complete configuration.     | All layers reflected accurately.        | Critical |
-| VAL-12 | Verify dependent layers are removed when parent selection is reset                                             | Reset parent selection.     | Related layers removed.                 | High     |
+
 
 
 3. Negative Test Cases
 
-| TC-ID  | Test Scenario                                                                             | Test Steps                         | Expected Result                  | Priority |
-| ------ | ----------------------------------------------------------------------------------------- | ---------------------------------- | -------------------------------- | -------- |
-| NEG-01 | Verify next step remains locked when previous step is incomplete                          | Leave Anchorage incomplete.        | Next step remains disabled.      | Critical |
-| NEG-02 | Verify user cannot access Tubes step directly when Anchorage Modifications are incomplete | Attempt direct navigation.         | Access denied.                   | Critical |
-| NEG-03 | Verify save draft fails gracefully when backend service is unavailable                    | Disconnect service and save draft. | Error displayed; no crash.       | Critical |
-| NEG-04 | Verify configuration screen handles corrupted draft data when resumed                     | Load corrupted draft.              | Validation error displayed.      | High     |
-| NEG-05 | Verify progress bar does not exceed 100% when duplicate selections are made               | Select multiple values repeatedly. | Progress remains valid.          | High     |
-| NEG-06 | Verify unsupported configuration code cannot be saved                                     | Inject invalid code.               | Request rejected.                | Critical |
-| NEG-07 | Verify configuration screen handles STL rendering failure when preview generation fails   | Simulate STL failure.              | Error handled gracefully.        | High     |
-| NEG-08 | Verify configuration screen handles 3D rendering failure when model generation fails      | Simulate rendering failure.        | Error shown without crash.       | Critical |
-| NEG-09 | Verify user cannot submit invalid configuration sequence when steps are skipped           | Skip required steps.               | Validation prevents progression. | Critical |
-| NEG-10 | Verify configuration state is not lost when save operation fails                          | Trigger save failure.              | Existing selections retained.    | Critical |
+
 
 
 4. Edge Case Test Cases
 
-| TC-ID   | Test Scenario                                                                                              | Test Steps                          | Expected Result                        | Priority |
-| ------- | ---------------------------------------------------------------------------------------------------------- | ----------------------------------- | -------------------------------------- | -------- |
-| EDGE-01 | Verify configuration behavior when no selections are made and draft is saved                               | Save empty draft.                   | Draft saved successfully.              | Medium   |
-| EDGE-02 | Verify configuration behavior when all possible options are selected where multiple selection is supported | Select all options.                 | System handles successfully.           | High     |
-| EDGE-03 | Verify configuration behavior when numbering system is switched repeatedly during selection                | Toggle rapidly.                     | State remains consistent.              | High     |
-| EDGE-04 | Verify progress updates correctly when selections are removed and re-added                                 | Remove and add selections.          | Progress recalculates correctly.       | High     |
-| EDGE-05 | Verify draft restoration when browser session expires before resume                                        | Resume after timeout.               | Draft restored correctly.              | High     |
-| EDGE-06 | Verify 3D model performance with maximum configuration layers applied                                      | Select maximum options.             | Model renders correctly.               | High     |
-| EDGE-07 | Verify behavior when user refreshes browser during configuration                                           | Refresh page.                       | Data persists according to design.     | High     |
-| EDGE-08 | Verify simultaneous draft save requests when Save button is clicked multiple times                         | Click Save repeatedly.              | Single valid draft saved.              | High     |
-| EDGE-09 | Verify configuration behavior under slow network conditions                                                | Simulate latency.                   | UI remains responsive.                 | Medium   |
-| EDGE-10 | Verify configuration restoration after application restart                                                 | Save draft and restart application. | State restored accurately.             | High     |
-| EDGE-11 | Verify progress indicator when user navigates backward through completed steps                             | Return to previous step.            | Progress remains accurate.             | Medium   |
-| EDGE-12 | Verify tooth selection persistence after multiple numbering system switches                                | Switch systems several times.       | Same tooth remains selected.           | High     |
-| EDGE-13 | Verify configuration behavior when STL file size is extremely large                                        | Load large STL.                     | Preview loads or fails gracefully.     | Medium   |
-| EDGE-14 | Verify behavior when configuration contains maximum supported accessories                                  | Add maximum accessories.            | No performance degradation.            | Medium   |
-| EDGE-15 | Verify behavior when browser tab remains idle for extended duration                                        | Stay idle and continue.             | Session behavior follows requirements. | Medium   |
+
 
 
 5. API Test Cases
 
-| TC-ID  | Test Scenario                                                                                 | Test Steps                       | Expected Result                       | Priority |
-| ------ | --------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------- | -------- |
-| API-01 | Verify Get Configuration API returns configuration metadata when HAB401 appliance is selected | Send GET request.                | 200 response with configuration data. | Critical |
-| API-02 | Verify Get Configuration API returns supported Anchorage values when requested                | Call API.                        | All Anchorage values returned.        | Critical |
-| API-03 | Verify Get Configuration API returns supported Tube values when requested                     | Call API.                        | All Tube values returned.             | High     |
-| API-04 | Verify Save Draft API stores selected configuration values when valid payload is submitted    | Send valid payload.              | Draft saved successfully.             | Critical |
-| API-05 | Verify Save Draft API stores progress percentage when draft is saved                          | Save draft.                      | Progress stored accurately.           | Critical |
-| API-06 | Verify Save Draft API stores tooth numbering preference when draft is saved                   | Save with Universal numbering.   | Preference stored correctly.          | High     |
-| API-07 | Verify Resume Draft API returns previously saved configuration when valid draft exists        | Retrieve draft.                  | Complete configuration returned.      | Critical |
-| API-08 | Verify Resume Draft API returns correct progress state when draft exists                      | Resume draft.                    | Progress matches saved value.         | Critical |
-| API-09 | Verify API rejects unsupported configuration codes when invalid payload is submitted          | Submit invalid code.             | Validation error returned.            | Critical |
-| API-10 | Verify API validates mandatory sequence when steps are submitted out of order                 | Submit out-of-order data.        | Request rejected.                     | Critical |
-| API-11 | Verify API returns correct mapping codes for selected configuration values                    | Submit selections.               | Expected codes returned.              | High     |
-| API-12 | Verify API returns cumulative configuration state after multiple updates                      | Update configuration repeatedly. | State remains consistent.             | High     |
-| API-13 | Verify API handles concurrent draft updates when multiple requests occur                      | Send parallel requests.          | No data corruption.                   | High     |
-| API-14 | Verify API response time remains acceptable when maximum configuration options are selected   | Submit large payload.            | Response within SLA.                  | Medium   |
-| API-15 | Verify API returns appropriate error when draft ID does not exist                             | Request invalid draft.           | 404/appropriate error returned.       | High     |
+
 
 
 6. UI/UX Test Cases
 
-| TC-ID | Test Scenario                                                                                         | Test Steps                        | Expected Result                     | Priority |
-| ----- | ----------------------------------------------------------------------------------------------------- | --------------------------------- | ----------------------------------- | -------- |
-| UI-01 | Verify 3D preview remains visible when configuration options are selected                             | Perform selections.               | Preview remains visible.            | High     |
-| UI-02 | Verify configuration panel remains stable when progress updates occur                                 | Complete steps.                   | No UI shifting.                     | High     |
-| UI-03 | Verify tooth selection panel remains interactive during 3D model updates                              | Update model repeatedly.          | Tooth panel remains responsive.     | High     |
-| UI-04 | Verify progress bar visually reflects completed percentage when steps are completed                   | Complete steps.                   | Visual progress is accurate.        | High     |
-| UI-05 | Verify numbering toggle is clearly visible when Configuration screen loads                            | Open screen.                      | Toggle displayed prominently.       | Medium   |
-| UI-06 | Verify selected configuration values are visually highlighted when chosen                             | Select values.                    | Selection state clearly indicated.  | High     |
-| UI-07 | Verify disabled steps are visually differentiated when prerequisites are incomplete                   | View locked steps.                | Disabled styling displayed.         | High     |
-| UI-08 | Verify Save Draft button remains accessible across all configuration stages                           | Navigate steps.                   | Save Draft visible and usable.      | High     |
-| UI-09 | Verify screen layout remains responsive on supported resolutions                                      | Resize screen.                    | Layout adapts correctly.            | Medium   |
-| UI-10 | Verify keyboard navigation works across configuration controls                                        | Navigate via keyboard.            | Controls accessible.                | Medium   |
-| UI-11 | Verify screen supports accessibility labels for interactive controls                                  | Inspect accessibility attributes. | Labels available.                   | Medium   |
-| UI-12 | Verify tooltip/help text is displayed for complex configuration options when available                | Hover help icons.                 | Appropriate guidance displayed.     | Low      |
-| UI-13 | Verify loading indicators are displayed during draft save operations                                  | Save draft.                       | Loading state shown.                | Medium   |
-| UI-14 | Verify loading indicators are displayed during 3D preview updates                                     | Change configuration.             | User receives feedback.             | Medium   |
-| UI-15 | Verify UI remains stable under rapid user interactions when multiple selections are performed quickly | Perform rapid actions.            | No flickering, overlap, or crashes. | High     |
+
